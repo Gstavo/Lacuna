@@ -42,8 +42,8 @@ public class PlayerController : MonoBehaviour {
             transform.Translate(Vector3.left * walkSpeed * Time.deltaTime);
 
             if (this.currentAnimationState != STATE_WALK) {
-                animator.SetInteger("state", STATE_IDLE);
-                currentAnimationState = STATE_IDLE;
+                animator.SetInteger("state", STATE_WALK);
+                currentAnimationState = STATE_WALK;
             }
         }
         else if (Input.GetKey("left"))
@@ -53,8 +53,8 @@ public class PlayerController : MonoBehaviour {
 
             if (this.currentAnimationState != STATE_IDLE)
             {
-                animator.SetInteger("state", STATE_IDLE);
-                currentAnimationState = STATE_IDLE;
+                animator.SetInteger("state", STATE_WALK);
+                currentAnimationState = STATE_WALK;
             }
         }
 
